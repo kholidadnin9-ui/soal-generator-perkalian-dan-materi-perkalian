@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Fredoka', 'Nunito', system-ui, -apple-system, sans-serif;
+    color: #1e293b;
+    background-color: #f0f9ff;
+    user-select: none;
+  }
+}
+
+@keyframes gentle-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes jungle-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+.animate-gentle-bounce {
+  animation: gentle-bounce 2.5s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
+
+.animate-jungle-float {
+  animation: jungle-float 4s ease-in-out infinite;
+}
+
+/* ---------- Print rules: hanya kertas paket soal yang tercetak ---------- */
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+  body {
+    background: #ffffff !important;
+    user-select: text;
+  }
+  .no-print {
+    display: none !important;
+  }
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  #paket-print-area {
+    display: block !important;
+  }
+  .print-paper {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+  .print-break {
+    break-inside: avoid;
+  }
+  .print-page-break {
+    break-after: page;
+  }
+}
+
+/* Custom scrollbars for kids */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #dcfce7;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border-radius: 9999px;
+  border: 2px solid #dcfce7;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #16a34a;
+}

@@ -1,0 +1,389 @@
+#paket-print-area {
+  display: grid;
+  gap: 32px;
+}
+
+.worksheet-package {
+  width: 100%;
+  max-width: 210mm;
+  margin-inline: auto;
+  color: #111827;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.25;
+  user-select: text;
+}
+
+.worksheet-page {
+  display: flex;
+  flex-direction: column;
+  padding: 10mm;
+  border: 1px solid #cbd5e1;
+  background: white;
+  box-shadow: 0 5px 20px #0f172a0a;
+}
+
+.worksheet-page + .worksheet-page {
+  margin-top: 24px;
+}
+
+.worksheet-heading {
+  margin-bottom: 2mm;
+  padding-bottom: 2.5mm;
+  border-bottom: 1.5px solid #111827;
+  text-align: center;
+}
+
+.worksheet-school {
+  font-weight: 700;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.worksheet-heading .worksheet-school {
+  font-size: 12pt;
+}
+
+.worksheet-heading h3 {
+  margin: 1mm 0;
+  font-size: 11.5pt;
+  font-weight: 700;
+}
+
+.worksheet-subtitle,
+.worksheet-student,
+.worksheet-reminder,
+.worksheet-directions,
+.worksheet-continuation {
+  font-size: 9.5pt;
+}
+
+.worksheet-student {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr 1.2fr;
+  gap: 2mm;
+  margin-bottom: 2mm;
+}
+
+.worksheet-reminder {
+  margin-bottom: 2.5mm;
+  font-style: italic;
+}
+
+.worksheet-section-title {
+  margin-bottom: 1mm;
+  font-size: 11pt;
+  font-weight: 700;
+}
+
+.worksheet-directions {
+  margin-bottom: 2mm;
+}
+
+.worksheet-questions,
+.worksheet-short-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5mm;
+}
+
+.worksheet-question-text {
+  padding-left: 5mm;
+  text-indent: -5mm;
+}
+
+.worksheet-question,
+.worksheet-answer-key,
+.worksheet-bottom {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.worksheet-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1mm 3mm;
+  margin-top: 1mm;
+  padding-left: 5mm;
+}
+
+.worksheet-options p {
+  padding-left: 4mm;
+  text-indent: -4mm;
+}
+
+.worksheet-pictures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8mm;
+  margin: 1mm 0 1mm 5mm;
+  break-inside: avoid;
+}
+
+.worksheet-picture-group {
+  min-width: 16mm;
+  padding: 1.1mm 1.4mm;
+  border: 1px solid #64748b;
+  border-radius: 2.5mm;
+  background: white;
+  text-align: center;
+}
+
+.worksheet-picture-items {
+  display: flex;
+  justify-content: center;
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+  font-size: 16pt;
+  line-height: 1.15;
+}
+
+.worksheet-picture-items span {
+  display: inline-block;
+  width: 1.05em;
+}
+
+.worksheet-picture-label {
+  margin-top: 0.5mm;
+  font-size: 8pt;
+  text-transform: capitalize;
+}
+
+.worksheet-continuation {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 5mm;
+  margin-bottom: 4mm;
+  padding-bottom: 2.5mm;
+  border-bottom: 1px solid #111827;
+}
+
+.worksheet-continuation > div {
+  max-width: 65%;
+}
+
+.worksheet-continuation > p {
+  white-space: nowrap;
+}
+
+.worksheet-short-questions {
+  gap: 4mm;
+}
+
+.worksheet-picture-instruction {
+  padding-left: 5mm;
+  margin-top: 2mm;
+}
+
+.worksheet-answer-line {
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  min-height: 9mm;
+  margin-top: 2mm;
+  padding-left: 5mm;
+}
+
+.worksheet-answer-template {
+  font-size: 12pt;
+  font-weight: 600;
+  line-height: 1.7;
+  word-spacing: 0.5mm;
+}
+
+.worksheet-writing-line {
+  flex: 1;
+  min-width: 0;
+  border-bottom: 1px dotted #475569;
+}
+
+.worksheet-answer-key {
+  margin-block: 4mm;
+  padding: 2.5mm;
+  border: 1px dashed #64748b;
+  font-size: 9pt;
+  line-height: 1.35;
+}
+
+.worksheet-answer-key h4,
+.worksheet-key-heading {
+  margin-bottom: 1.5mm;
+  font-weight: 700;
+}
+
+.worksheet-key-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4mm;
+}
+
+.worksheet-key-mc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1mm 2mm;
+}
+
+.worksheet-bottom {
+  margin-top: auto;
+  padding-top: 4mm;
+}
+
+.worksheet-closing {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 22mm minmax(0, 1.2fr);
+  align-items: center;
+  gap: 6mm;
+  padding-top: 3mm;
+  border-top: 1px solid #94a3b8;
+  font-size: 10pt;
+  break-inside: avoid;
+}
+
+.worksheet-signature-space {
+  height: 12mm;
+}
+
+.worksheet-teacher {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  overflow-wrap: anywhere;
+}
+
+.worksheet-score {
+  text-align: center;
+}
+
+.worksheet-score-box {
+  width: 20mm;
+  height: 13mm;
+  margin: 1mm auto 0;
+  border: 1.5px solid #111827;
+  border-radius: 1.5mm;
+}
+
+.worksheet-closing-message {
+  text-align: right;
+}
+
+.worksheet-pagination {
+  margin-top: auto;
+  padding-top: 3mm;
+  text-align: right;
+  font-size: 8pt;
+  color: #475569;
+}
+
+@media screen and (min-width: 860px) {
+  .worksheet-page {
+    min-height: 297mm;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .worksheet-page {
+    padding: 16px;
+  }
+
+  .worksheet-student,
+  .worksheet-key-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .worksheet-options,
+  .worksheet-closing {
+    grid-template-columns: 1fr;
+  }
+
+  .worksheet-options {
+    gap: 5px;
+  }
+
+  .worksheet-continuation {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .worksheet-continuation > div {
+    max-width: none;
+  }
+
+  .worksheet-closing-message {
+    text-align: center;
+  }
+
+  .worksheet-answer-template {
+    font-size: 10.5pt;
+    word-spacing: normal;
+  }
+}
+
+@media screen {
+  .worksheet-key-screen-hidden {
+    display: none;
+  }
+}
+
+@media print {
+  /* Fixed A4 content height leaves 1 mm of tolerance for browser rounding. */
+  body:has(#paket-print-area) #root,
+  body:has(#paket-print-area) #root > div,
+  body:has(#paket-print-area) main,
+  .print-generator,
+  #paket-print-area {
+    display: block !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  .print-generator > * {
+    margin: 0 !important;
+  }
+
+  .worksheet-package {
+    max-width: none;
+    margin: 0;
+    color: black;
+  }
+
+  .worksheet-page {
+    width: 100%;
+    height: 276mm;
+    min-height: 0;
+    margin: 0 !important;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .worksheet-page + .worksheet-page,
+  .worksheet-package + .worksheet-package {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .worksheet-pictures {
+    flex-wrap: nowrap;
+  }
+
+  .worksheet-key-explanation {
+    display: none;
+  }
+
+  .worksheet-key-mc {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .worksheet-answer-key {
+    font-size: 8.5pt;
+  }
+
+  .worksheet-pagination {
+    color: black;
+  }
+}
