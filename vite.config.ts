@@ -10,6 +10,7 @@ const __dirname = path.dirname(__filename);
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/soal generator perkalian dan materi perkalian/",
   plugins: [react(), tailwindcss(), viteSingleFile()],
   resolve: {
     alias: {
